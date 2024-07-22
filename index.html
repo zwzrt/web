@@ -86,7 +86,7 @@
             mounted() {
                 axios({
                     method: "get",
-                    url: window.location.protocol+"//"+window.location.host+"/ChatService/message-plus-doc/md/summarize.md"
+                    url: window.location.protocol+"//"+window.location.host+"/md/summarize.md"
                 }).then(resp=>{
                     const options = {
                         gfm: true, // 默认为true。 允许 Git Hub标准的markdown
