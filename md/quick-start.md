@@ -6,7 +6,7 @@
    <dependency>
        <groupId>io.github.zwzrt</groupId>
        <artifactId>message-plus</artifactId>
-       <version>0.0.6-beta</version>
+       <version>0.0.61-beta</version>
    </dependency>
    ```
 
