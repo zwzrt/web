@@ -63,8 +63,9 @@
                             <el-sub-menu index="3">
                                 <template #title>高级</template>
                                 <el-menu-item index="3-1" @click="mdInitialization('configuration-file')">配置文件</el-menu-item>
-                                <el-menu-item index="3-2" @click="mdInitialization('second-level-query-interface')">二级查询接口</el-menu-item>
-                                <el-menu-item index="3-3" @click="mdInitialization('utility-class')">MessagePlusUtils工具类</el-menu-item>
+                                <el-menu-item index="3-2" @click="mdInitialization('front-end-interface')">前端接口</el-menu-item>
+                                <el-menu-item index="3-3" @click="mdInitialization('second-level-query-interface')">二级查询接口</el-menu-item>
+                                <el-menu-item index="3-4" @click="mdInitialization('utility-class')">MessagePlusUtils工具类</el-menu-item>
                             </el-sub-menu>
                         </el-menu>
                     </el-aside>
@@ -73,8 +74,9 @@
                             <div id="summarize" class="markdown-body" title="概述" v-show="mainIndex==='1'"></div>
                             <div id="quick-start" class="markdown-body" title="快速开始" v-show="mainIndex==='2'"></div>
                             <div id="configuration-file" class="markdown-body" title="配置文件" v-show="mainIndex==='3-1'"></div>
-                            <div id="second-level-query-interface" class="markdown-body" title="二级查询接口" v-show="mainIndex==='3-2'"></div>
-                            <div id="utility-class" class="markdown-body" title="MessagePlusUtils工具类" v-show="mainIndex==='3-3'"></div>
+                            <div id="front-end-interface" class="markdown-body" title="前端接口" v-show="mainIndex==='3-2'"></div>
+                            <div id="second-level-query-interface" class="markdown-body" title="二级查询接口" v-show="mainIndex==='3-3'"></div>
+                            <div id="utility-class" class="markdown-body" title="MessagePlusUtils工具类" v-show="mainIndex==='3-4'"></div>
                         </div>
                     </el-main>
                 </el-container>
@@ -140,7 +142,7 @@
             },
             data() {
                 return {
-                    parentUrl: "https://zwzrt.github.io",
+                    parentUrl: window.location.protocol+"//"+window.location.host,
                     mainIndex: '1',
                 };
             }

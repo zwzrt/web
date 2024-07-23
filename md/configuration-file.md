@@ -9,4 +9,5 @@
      message:
      	message-persistence: true # 消息持久化（默认开启，需要开启persistence才可以生效）
      	expiration-time: -1 # 消息持久化的过期时间
+     	concurrent-number: 1 # 并发量
    ```
