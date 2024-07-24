@@ -9,11 +9,24 @@
  **/
 public class MessagePlusUtils {
     /**
+     * 加入聊天
+     * @param id 用户ID
+     * @param session 用户对应session
+     * @return 返回全部在线人数
+     */
+    public static Long joinChat(String id, MessagePlusService base, Session session);
+    /**
+     * 退出聊天
+     * @param id 用户ID
+     * @return 返回全部在线人数
+     */
+    public static Long quitChat(String id);
+    /**
      * 给指定用户发送消息
      */
-    public static boolean sendMessage(String id, String msg);
+    public static boolean sendMessage(String id, Message msg);
     /**
-     * 创建群组（主要用于主动创建群组，若实现了二级查询接口，则无需调用此接口）
+     * 创建群组
      * @param createUserId 创建者ID
      * @param name 群组名称
      * @param client_ids 群成员ID
@@ -33,7 +46,7 @@ public class MessagePlusUtils {
      * @param message 消息内容
      * @return 失败用户ID
      */
-    public static List<String> sendMessageToGroup(String groupId, String message);
+    public static List<String> sendMessageToGroup(String groupId, Message message);
     /**
      * 群发（不包括自己）
      * @param userId 用户ID
@@ -41,7 +54,15 @@ public class MessagePlusUtils {
      * @param message 消息内容
      * @return 失败用户ID
      */
-    public static List<String> sendMessageToGroupBarringMe(String userId, String groupId, String message);
+    public static List<String> sendMessageToGroupBarringMe(String userId, String groupId, Message message);
+    /**
+     * 服务端发送消息
+     */
+    public static void sendMessage(Session session, String message);
+    /**
+     * 服务端发送消息
+     */
+    public static void sendMessage(Session session, Message message);
     /**
      * 获取总在线人数
      */
@@ -65,11 +86,12 @@ public class MessagePlusUtils {
      * @param userId 用户ID
      */
     public static List<Message> getNewMessage(String userId);
-	/**
+    /**
      * 提示指定用户存在新消息（该方法主要用于集群架构中跨服务使用，框架自己调用，开发者一般不需要）
      * @param userId 用户ID
      */
     public static void hasNewMessage(String userId);
 }
+
 ```
 
