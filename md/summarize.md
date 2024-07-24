@@ -1,4 +1,4 @@
-<img src="../logo2.png" align="center" alt="logo"/>
+<img src="https://zwzrt.github.io/logo2.png" align="center" alt="logo"/>
 
 # 消息增强器（message-plus）
 
@@ -11,7 +11,7 @@
 #### 软件架构
 Maven + SpringBoot + WebSocket + Redis
 
-#### xxxxxxxxxx /** * 发送单发类消息 * @param receiverId 用户ID * @param msg 消息体 */@PostMapping("/messageplus/send/single")void sendSingleMessage(@RequestParam("id1") String myId, @RequestParam("id2") String receiverId, @RequestBody Object msg);/** * 发送群发类消息 * @param groupId 群组ID * @param msg 消息体 */@PostMapping("/messageplus/send/mass")void sendMassMessage(@RequestParam("id1") String senderId, @RequestParam("id2") String groupId, @RequestBody Object msg);/** * 发送系统类消息 * @param msg 消息体 */@PostMapping("/messageplus/send/system")void sendSystemMessage(@RequestParam("id1") String myId, @RequestBody Object msg);java
+#### 项目地址
 
 [Gitee](https://gitee.com/modmb/message-plus)
 
