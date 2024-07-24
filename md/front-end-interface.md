@@ -8,8 +8,6 @@
 var websocket = new WebSocket("ws://localhost:8081/messageplus/ws/"+id);
 ```
 
-xxxxxxxxxx messageplus:  serviceId: ... # 服务ID，需要唯一，为空时会自动生成  persistence: true # 开启持久化  message:    message-persistence: true # 消息持久化（默认开启，需要开启persistence才可以生效）    expiration-time: -1 # 消息持久化的过期时间    concurrent-number: 1 # 并发量yml
-
 插件增强器会先调用开发者实现的onOpen()方法，使用该方法返回的ID作为最终标识符。
 
 ### 2、发送请求
